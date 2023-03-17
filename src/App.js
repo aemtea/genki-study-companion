@@ -1,22 +1,15 @@
-import logo from './logo.svg';
+import LessonSelector from './lessonSelector';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Genki Study Companion</h1>
+        <p>A study companion for practicing grammar/vocabulary introduced in Genki: An Integrated Course in Elementary Japanese.</p>
+
+        <LessonSelector />
+        <button type='button'>Study</button>
       </header>
     </div>
   );
