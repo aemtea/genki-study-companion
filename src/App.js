@@ -1,4 +1,4 @@
-import LessonSelector from './lessonSelector';
+import LessonPicker from './components/lessonPicker/lessonPicker';
 import './App.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
         <h1>Genki Study Companion</h1>
         <p>A study companion for practicing grammar/vocabulary introduced in Genki: An Integrated Course in Elementary Japanese.</p>
 
-        <LessonSelector />
+        <LessonPicker />
         <button type='button'>Study</button>
       </header>
     </div>

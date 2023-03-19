@@ -1,0 +1,28 @@
+const lessons = [
+    { id: "lesson0", description: "Lesson 0: Writing System, Greetings, and Numbers" },
+    { id: "lesson1", description: "Lesson 1: New Friends" },
+    { id: "lesson2", description: "Lesson 2: Shopping" },
+    { id: "lesson3", description: "Lesson 3: Making a Date" },
+    { id: "lesson4", description: "Lesson 4: The First Date" },
+    { id: "lesson5", description: "Lesson 5: A Trip to Okinawa" },
+    { id: "lesson6", description: "Lesson 6: A Day in Robert's Life" },
+    { id: "lesson7", description: "Lesson 7: Family Picture" },
+    { id: "lesson8", description: "Lesson 8: Barbecue" },
+    { id: "lesson9", description: "Lesson 9: Kabuki" },
+    { id: "lesson10", description: "Lesson 10: Winter Vacation Plans" },
+    { id: "lesson11", description: "Lesson 11: After the Vacation" },
+    { id: "lesson12", description: "Lesson 12: Feeling Ill" },
+    { id: "lesson13", description: "Lesson 13: Looking for a Part-time Job" },
+    { id: "lesson14", description: "Lesson 14: Valentine's Day" },
+    { id: "lesson15", description: "Lesson 15: A Trip to Nagano" },
+    { id: "lesson16", description: "Lesson 16: Lost and Found" },
+    { id: "lesson17", description: "Lesson 17: Grumble and Gossip" },
+    { id: "lesson18", description: "Lesson 18: John's Part-time Job" },
+    { id: "lesson19", description: "Lesson 19: Meeting the Boss" },
+    { id: "lesson20", description: "Lesson 20: Mary Goes Shopping" },
+    { id: "lesson21", description: "Lesson 21: Burglar" },
+    { id: "lesson22", description: "Lesson 22: Education in Japan" },
+    { id: "lesson23", description: "Lesson 23: Good-bye" },
+];
+
+export default lessons;
