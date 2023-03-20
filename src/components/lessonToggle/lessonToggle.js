@@ -3,10 +3,10 @@ import './lessonToggle.css'
 function LessonToggle(props) {
     var lesson = props.lesson;
 
-    const onChange = () => {
+    const onToggle = () => {
         const start = "lesson".length;
         const index = lesson.id.substring(start);
-        props.onChange(Number(index));
+        props.onToggle(Number(index));
     }
 
     return(
@@ -16,7 +16,7 @@ function LessonToggle(props) {
                 id={lesson.id}
                 value={lesson.id}
                 checked={props.checked}
-                onChange={onChange}
+                onChange={onToggle}
             />
             <label for={lesson.id}>{lesson.description}</label>
         </div>
