@@ -9,16 +9,22 @@ export const toPolitePresent = (vocab) => {
 const getPolitePresentReplaceCharacter = (vocab) => {
     let lastCharacter = vocab.kanji.substring(vocab.kanji.length - 1);
         
-    if (vocab.type === 'ichidan verb') return '';    
-    if (vocab.type === 'godan verb') {
-        if (lastCharacter === 'く') return 'き';    
-        if (lastCharacter === 'る') return 'り';    
-        if (lastCharacter === 'む') return 'み';    
-        if (lastCharacter === 'す') return 'し';    
-        if (lastCharacter === 'う') return 'い';    
-        if (lastCharacter === 'つ') return 'ち';    
+    if (containsLabels(vocab, ['ichidan'])) return '';
+    if (containsLabels(vocab, ['godan'])) {
+        if (lastCharacter === 'く') return 'き';
+        if (lastCharacter === 'る') return 'り';
+        if (lastCharacter === 'む') return 'み';
+        if (lastCharacter === 'す') return 'し';
+        if (lastCharacter === 'う') return 'い';
+        if (lastCharacter === 'つ') return 'ち';
         if (lastCharacter === 'ぬ') return 'に';
     }
 
-    return '';
+    return null;
+}
+
+const containsLabels = (vocab, labels) => {
+    return labels.every(label => {
+        return vocab.labels.includes(label);
+    });
 }
