@@ -1,12 +1,24 @@
-export const toPolitePresent = (vocab) => {
-    let base = vocab.kanji.substring(0, vocab.kanji.length - 1);
-    
-    let replaceCharacter = getPolitePresentReplaceCharacter(vocab);
-
-    return `${base}${replaceCharacter}ます`;
+export const conjugateJapanese = (vocab, tense) => {
+    switch(tense) {
+        case 'present':
+        case 'past':
+            const suffix = tense === 'present' ? 'ます' : 'ました';
+            const base = vocab.kanji.substring(0, vocab.kanji.length - 1);
+            const replaceCharacter = getReplaceCharacter(vocab);
+            return `${base}${replaceCharacter}${suffix}`;
+    }
 };
 
-const getPolitePresentReplaceCharacter = (vocab) => {
+export const conjugateEnglish = (vocab, tense) => {
+    switch(tense) {
+        case 'present':
+            return vocab.english.present;
+        case 'past':
+            return vocab.english.past;
+    }
+};
+
+const getReplaceCharacter = (vocab) => {
     let lastCharacter = vocab.kanji.substring(vocab.kanji.length - 1);
         
     if (containsLabels(vocab, ['ichidan'])) return '';
